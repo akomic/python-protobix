@@ -46,7 +46,6 @@ class DataContainer(SenderProtocol):
 
     REQUEST = "sender data"
     _data_type = None
-    _items_list = []
 
     def __init__(self, data_type  = None,
                        zbx_file   = '/etc/zabbix/zabbix_agentd.conf',
@@ -57,6 +56,7 @@ class DataContainer(SenderProtocol):
                        dryrun     = False,
                        logger     = None):
 
+        self._items_list = []
         # Loads config from zabbix_agentd file
         # If no file, it uses the default _config as configuration
         self._load_zabbix_config(zbx_file)
