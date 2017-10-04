@@ -1,6 +1,11 @@
 .coverage
-protobix/*.pyc
-protobix/__pycache__/
-tests/__pycache__/
+.cache
+*.pyc
+*.swp
+/__pycache__/
+/.eggs/
 MANIFEST
 dist/
+*.egg-info
+*.xdb
+*.db
